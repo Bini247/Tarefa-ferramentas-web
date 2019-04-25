@@ -1,0 +1,10 @@
+.conteudo img{
+    width: 30%;
+    height: auto;
+}
+
+.divImgInfo{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
