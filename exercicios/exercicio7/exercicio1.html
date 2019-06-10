@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script>
+    var pessoas = [
+      {
+        nome: 'Joao silva',
+        idade: 17,
+      },
+      {
+        nome: 'Maria Silva',
+        idade: 35,
+      },
+      {
+        nome: 'José Silva',
+        idade: 15,
+      },
+      {
+        nome: 'Marina Silva',
+        idade: 40,
+      }
+    ]
+    
+    window.onload = function() {
+
+	    listaVelho = document.getElementById('listaMaiores');
+	    listaNovo = document.getElementById('listaMenores');
+	    conteudoNovo = conteudoVelho = "";
+
+	    pessoas.forEach(pessoa => {
+	        if(pessoa.idade < 18)
+	            conteudoNovo += "<li class='list-group-item'>"+pessoa.nome+" - "+pessoa.idade+"</li>";
+	        else
+	            conteudoVelho += "<li class='list-group-item'>"+pessoa.nome+" - "+pessoa.idade+"</li>";
+	    });
+
+	    listaVelho.innerHTML = conteudoVelho;
+	    listaNovo.innerHTML = conteudoNovo;
+    }
+  </script>
+</head>
+<body>
+  <div id="conteudo">
+    <ul id="listaMaiores">
+    </ul>
+    <ul id="listaMenores">
+    </ul>
+  </div>
+</body>
+</html>

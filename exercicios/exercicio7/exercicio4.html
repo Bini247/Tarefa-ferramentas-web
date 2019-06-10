@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script>
+    function ehPalindromo() {
+      var palavraInput = document.getElementById('palavra');
+      var palavra = palavraInput.value;
+      var resposta = document.getElementById('resposta');
+
+      palindrome = palavra.split('').reverse().join('');
+
+      if(palavra === palindrome) {
+
+          resposta.innerHTML = 'É um palíndromo!';
+      }else {
+
+          resposta.innerHTML = 'Não é um palíndromo!';
+      }
+    }
+
+  </script>
+</head>
+<body>
+    <div>
+        <div>
+            <input id="palavra">
+            <button type="button" onclick="ehPalindromo()">É um palíndromo?</button>
+            <div id="resposta"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script>
+    function mostraTabuada() {
+      var campoNumero = document.getElementById('campoNumero');
+      var numeroDigitado = campoNumero.value;
+
+      var resultadoTabuada = document.getElementById('resultadoTabuada');
+
+      tabuada = "";
+      for(i = 0; i <= 9; i++) {
+          tabuada += numeroDigitado + 'x' + i + ' = ' + (numeroDigitado * i) + '<br>';
+      }
+
+      resultadoTabuada.innerHTML = tabuada;
+
+    }
+  </script>
+</head>
+<body>
+  <div id="conteudo">
+    <div>
+      <input id="campoNumero"/>
+      <button onclick="mostraTabuada()">Mostar Tabuada</button>
+    </div>
+
+    <div id="resultadoTabuada">
+    </div>
+  </div>
+</body>
+</html>

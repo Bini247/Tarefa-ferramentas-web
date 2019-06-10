@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script>
+    var pessoas = [
+      {
+        nome: 'Joao silva',
+        sexo: 'M',
+      },
+      {
+        nome: 'Maria Silva',
+        sexo: 'F',
+      },
+      {
+        nome: 'José Silva',
+        sexo: 'M',
+      },
+      {
+        nome: 'Marina Silva',
+        sexo: 'F',
+      },
+      {
+        nome: 'Eduarda Silva',
+        sexo: 'F',
+      }
+    ]
+    
+    window.onload = function() {
+
+      masculino = pessoas.filter((pessoa) => {
+          return pessoa.sexo === 'M';
+      });
+
+      feminino = pessoas.filter((pessoa) => {
+          return pessoa.sexo === 'F';
+      });
+
+      mediamasc = pessoas.length / masculino.length;
+      mediafeminino = pessoas.length / feminino.length;
+
+      document.getElementById('mascmedia').innerHTML = "Masc: "+mediamasc.toFixed(2);
+      document.getElementById('femmedia').innerHTML = "Fem: "+mediafeminino.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <div id="conteudo">
+    <ul id="mascmedia">
+    </ul>
+    <ul id="femmedia">
+    </ul>
+  </div>
+</body>
+</html>
